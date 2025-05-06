@@ -1,0 +1,1 @@
+web: gunicorn AhlusSunnahYouthClub.wsgi --log-file -
