@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Quran AhlusSunnahYouthClub{% endblock %}
+
+{% block body %}
+
+
+<div class="bg-gray-900 text-white mt-5 py-16">
+    <div class="container px-5 py-32 mx-auto ">
+        <div class="flex flex-col text-center w-full mt-24 mb-32">
+            <h2 class="text-xs text-green-400 tracking-widest font-medium title-font mt-10 mb-5">بِسْمِ اللهِ
+                الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-5 text-white">KANZUL IMAN</h1>
+            {% comment %} <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Welcome to our community! We're a
+                passionate group
+                inspired by the teachings of Imam Ahmad Raza, dedicated to spreading the beauty and wisdom of Islam.
+                Through education and outreach, we strive to inspire others to serve the Deen and foster understanding
+                and unity in our world.</p>
+            <br />
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Join us on this journey of enlightenment and
+                empowerment as we share the timeless teachings of Islam with all.</p> {% endcomment %}
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'KanzulIman.jpg' %}" class="card-img-top img-fluid" alt="Qur'an"
+                    style="max-height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">KANZUL IMAN</h5>
+                    <p class="card-text">
+                        Explore the majestic Urdu translation of the Qur’an by A’la Hazrat Imam Ahmad Raza Khan —
+                        <em>Kanzul Iman</em>. Known for its eloquence, reverence, and spiritual depth, this translation
+                        brings the divine message to life for Urdu-speaking hearts.
+                        <br><br>
+                        <strong>"This is the Book in which there is no doubt, a guidance for the pious."</strong> (Surah
+                        Baqarah, 2:2)
+                    </p>
+
+                    <a href="https://alahazrat.net/al-quran/quran-simple/" class="btn btn-outline-light">Read
+                        Translation</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'Noorulirfan.jpg' %}" class="card-img-top img-fluid" alt="Hadith"
+                    style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">KANZUL IMAN + TAFSIR NOOR-UL-IRFAN</h5>
+                    <p class="card-text">
+                        Deepen your understanding with the powerful pairing of <em>Kanzul Iman</em> and the Urdu
+                        commentary <em>Noor-ul-Irfan</em>. This Tafsir brings the meanings of Qur’anic verses to light
+                        through insights from classical scholars of the Ahlus Sunnah.
+                        <br><br>
+                        <strong>"Do they not ponder over the Qur’an?"</strong> (Surah Muhammad, 47:24)
+                    </p>
+                    <a href="https://alahazrat.net/al-quran/kanzul-iman-noor-ul-irfan/"
+                        class="btn btn-outline-light">Read Tafseer</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Card 3 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'audioquran.jpg' %}" class="card-img-top img-fluid" alt="Hadith"
+                    style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">LISTEN TO QUR’AN</h5>
+                    <p class="card-text">
+                        Listen to the holy Qur’an recited with beauty and devotion. Whether you're commuting or relaxing
+                        at home, immerse yourself in the rhythm and majesty of Allah’s words, and let it fill your heart
+                        with peace.
+                        <br><br>
+                        <strong>"And when the Qur’an is recited, listen to it attentively and be silent so that you may
+                            receive mercy."</strong> (Surah A'raf, 7:204)
+                    </p>
+                    <a href="https://alahazrat.net/media/series/al-quran-translation-surah-wise/"
+                        class="btn btn-outline-light">Listen Now</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}HomePage AhlusSunnahYouthClub{% endblock %}
+
+{% block body %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+
+<div class="bg-gray-900 text-white mt-5 py-16">
+    <div class="container px-5 py-32 mx-auto ">
+        <div class="flex flex-col text-center w-full mt-24 mb-32">
+            <h2 class="text-xs text-green-400 tracking-widest font-medium title-font mt-10 mb-5">بِسْمِ اللهِ
+                الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-5 text-white">AHL-US-SUNNAH YOUTH CLUB</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Welcome to our community! We're a passionate group
+                inspired by the teachings of Imam Ahmad Raza, dedicated to spreading the beauty and wisdom of Islam.
+                Through education and outreach, we strive to inspire others to serve the Deen and foster understanding
+                and unity in our world.</p>
+            <br />
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Join us on this journey of enlightenment and
+                empowerment as we share the timeless teachings of Islam with all.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'quran.jpg' %}" class="card-img-top img-fluid" alt="Qur'an"
+                    style="max-height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">QUR'AN</h5>
+                    <p class="card-text">
+                        Immerse yourself in the divine words of Allah ﷻ, beautifully translated in <em>Kanzul Iman</em>
+                        by A’la Hazrat Imam Ahmad Raza. Reflect upon the meanings through the illuminating Tafsir
+                        <em>Siratul Jinan</em>, and draw nearer to the guidance that shaped the hearts of the Awliya and
+                        the righteous.<br><br>
+                        <strong>"This is the Book in which there is no doubt, a guidance for the pious."</strong> (Surah
+                        Baqarah, 2:2)
+                    </p>
+
+                    <a href="{% url 'quran' %}" class="btn btn-outline-light">Read Qur'an</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'hadith.jpg' %}" class="card-img-top img-fluid" alt="Hadith"
+                    style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">HADITH</h5>
+                    <p class="card-text">
+                        Discover the noble sayings of Sayyiduna Rasulullah ﷺ as preserved in authentic Hadith
+                        collections, explained through the lens of the Ahlus Sunnah. Enrich your soul with the wisdom,
+                        mercy, and light of the Blessed Prophet ﷺ — the walking Qur’an, whose every word is
+                        guidance.<br><br>
+                        <strong>“The best among you is the one who learns the Qur’an and teaches it.”</strong> (Bukhari)
+                    </p>
+                    <a href="{% url 'hadith' %}" class="btn btn-outline-light">Read Hadith</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Card 3 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'hadith.jpg' %}" class="card-img-top img-fluid" alt="Hadith"
+                    style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">ISLAMIC LIBRARY</h5>
+                    <p class="card-text">
+                        Access timeless Islamic works in Urdu, Arabic, English and Roman Urdu — from <em>Fatawa
+                            Razawiyyah</em> to books on Aqidah, Tasawwuf, and Seerah. A curated library for seekers of
+                        truth, reviving the legacy of A’la Hazrat and the spiritual masters of the Ummah.
+                    </p>
+                    <a href="https://books.abdemustafa.com/" class="btn btn-outline-light">Visit Library</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Card 4 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'insta.png' %}" class="card-img-top img-fluid" alt="IG page"
+                    style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">JOIN US ON INSTAGRAM</h5>
+                    <p class="card-text">
+                        Stay inspired daily with short reminders, quotes of the Awliya, event updates, and reflections
+                        on the Sunnah. Follow our journey as we spread the light of Deen across generations — visually
+                        vibrant, spiritually uplifting.
+                    </p>
+                    <a href="" https://www.instagram.com/ahlussunnah_youthclub?igsh=MThmcWU0Y2w5Nnp3cg==""
+                        class="btn btn-outline-light">Follow on Instagram</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 5 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'YT.jpeg' %}" class="card-img-top img-fluid" alt="YouTube page"
+                    style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">AHLUSSUNNAH YOUTHCLUB ON YOUTUBE</h5>
+                    <p class="card-text">
+                        Tune in to soulful Bayans, Qur’an recitations, Naat Shareef, and youth-led reflections — all
+                        rooted in the love of the Prophet ﷺ and the guidance of the rightly guided scholars. Let every
+                        view be a step closer to Allah ﷻ and His Beloved ﷺ.
+                    </p>
+                    <a href="https://www.youtube.com/@SyedNuairRazavi" class="btn btn-outline-light">Watch on
+                        YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat the above col-md-4 block for each card -->
+        <!-- Add more cards as needed using the same structure -->
+
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,86 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {% block title %}Base{% endblock title %} </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{% static 'logo.png' %}" alt="Logo" height="50" class="d-inline-block align-text-top me-2">
+            AhlusSunnah YouthClub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Library
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'quran' %}">Qur'an</a></li>
+                        <li><a class="dropdown-item" href="{% url 'hadith' %}">Hadith</a></li>
+                        <li><a class="dropdown-item"
+                                href="https://www.instagram.com/ahlussunnah_youthclub?igsh=MThmcWU0Y2w5Nnp3cg==">Instagram</a>
+                        </li>
+                        <li><a class="dropdown-item" href="https://www.youtube.com/@SyedNuairRazavi">YouTube</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="https://books.abdemustafa.com/">Islamic Books</a></li>
+                    </ul>
+                </li>
+                {% comment %} <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li> {% endcomment %}
+            </ul>
+            {% comment %} <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> {% endcomment %}
+        </div>
+        <div class="nav">
+            <a class="nav-link fw-bold py-1 px-3" href="{% url 'login' %}">Login</a>
+        </div>
+        </div>
+    </nav>
+
+    {% block body %} {% endblock body %}
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <footer class="mt-auto text-center small text-white-50">
+            <p>Developed by <a href="https://www.linkedin.com/in/mohammad-hassan-8a9735317/" class="text-white">Mohammad
+                    Hassan Qadri</a>.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

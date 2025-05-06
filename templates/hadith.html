@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Hadith AhlusSunnahYouthClub{% endblock %}
+
+{% block body %}
+
+
+<div class="bg-gray-900 text-white mt-5 py-16">
+    <div class="container px-5 py-32 mx-auto ">
+        <div class="flex flex-col text-center w-full mt-24 mb-32">
+            <h2 class="text-xs text-green-400 tracking-widest font-medium title-font mt-10 mb-5">بِسْمِ اللهِ
+                الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-5 text-white">FAIZAN E HADEES</h1>
+
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Check Out our most trusted Hadith App on PlayStore.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-white h-100" style="background-color:#2F4F4F;">
+                <img src="{% static 'HadeesApp.png' %}" class="card-img-top img-fluid" alt="Qur'an"
+                    style="max-height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">FAIZAN-E-HADEES</h5>
+                    <p class="card-text">
+                        Indeed, Allah Almighty is the Most Bountiful. He sent His last messenger, Prophet Muhammad
+                        Mustafa ﷺ, about 1400 years ago for the guidance of all humanity until Qayamah (Judgement Day).
+                        Therefore, the treasure of guidance remains available to all through the teachings and noble
+                        example of the Beloved Prophet ﷺ.
+                        <br><br>
+                        After the Qur’an Sharif, the most authentic sources of guidance are the Prophet’s ﷺ sayings —
+                        <em>Ahadith</em> — and his Sunnah. The I.T. Department of Dawat-e-Islami proudly presents the
+                        “Faizan-e-Hadees” app: a rich collection of Hadith Sharif with Arabic text, Urdu translation,
+                        and explanatory notes (Tashreeh).
+                        <br><br>
+                        This beautifully designed app offers a user-friendly experience and an extensive treasure of
+                        knowledge. Download now and enrich your heart with the light of Hadees.
+                    </p>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.dawateislami.islam.sunnah.hadees&hl=en_IN"
+                        class="btn btn-outline-light">Check now</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block title %}AboutUs - AhlusSunnahYouthClub{% endblock %}
+
+{% block body %}
+
+<div class="d-flex align-items-center justify-content-center mt-5" style="min-height: 90vh; text-align: center;">
+    <main role="main" class="inner cover px-3" style="max-width: 800px;">
+        <h1 class="display-4 fw-bold my-5">About Us</h1>
+        <p class="lead mb-4" style="line-height: 1.7;">
+            Welcome to our community! We are a passionate group of young students dedicated to following the noble path
+            of Imam Ahmad Raza. Our mission is to propagate the profound teachings of Islam and inspire individuals from
+            all walks of life to serve the Deen.
+        </p>
+        <p class="lead mb-4" style="line-height: 1.7;">
+            Imam Ahmad Raza, a beacon of wisdom and enlightenment, has left an indelible mark on Islamic scholarship
+            through his profound insights and unwavering devotion. In following his footsteps, we strive to embody the
+            essence of his teachings and share them with the world.
+        </p>
+        <p class="lead mb-4" style="line-height: 1.7;">
+            With a fervent commitment to fostering understanding and unity, we endeavor to illuminate hearts and minds
+            with the timeless wisdom of Islam. Through education, outreach, and compassionate action, we aspire to
+            create a world where the light of faith shines brightly in every corner.
+        </p>
+        <p class="lead mb-5" style="line-height: 1.7;">
+            Join us on this journey of enlightenment and empowerment as we work tirelessly to spread the beauty and
+            richness of Islam to all.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-lg btn-light fw-bold border-white bg-white my-5">Contact Us</a>
+    </main>
+</div>
+
+{% endblock body %}
