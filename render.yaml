@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ahlus-sunnah-youth-club
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn AYC.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: AYC.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "your-render-service-name.onrender.com"
