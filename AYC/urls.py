@@ -22,4 +22,5 @@ from home import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('home.urls')),
+    path('query/', include('query_register.urls')),  # include your query_register app URLs
 ] 

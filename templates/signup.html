@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ContactUs- AhlusSunnahYouthClub{% endblock title %}
+
+{% block body %}
+
+
+
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Submitted successfully!</strong> You can now Log in.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <form method="POST" action="" class="w-100" style="max-width: 500px;">
+        {% csrf_token %}
+        <h2 class="text-center mb-4">Create an Account</h2>
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username"
+                    value="{{ form.username.value|default:'' }}">
+            </div>
+            {% if form.username.errors %}
+            <div class="text-danger">{{ form.username.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                value="{{ form.email.value|default:'' }}">
+            {% if form.email.errors %}
+            <div class="text-danger">{{ form.email.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone"
+                   placeholder="Enter your phone number" value="{{ form.phone.value|default:'' }}">
+            {% if form.phone.errors %}
+              <div class="text-danger">{{ form.phone.errors.0 }}</div>
+            {% endif %}
+          </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+            {% if form.password.errors %}
+            <div class="text-danger">{{ form.password.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            <label for="password_confirm" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="password_confirm" name="password_confirm"
+                placeholder="Re-enter your password">
+            {% if form.password_confirm.errors %}
+            <div class="text-danger">{{ form.password_confirm.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Query - AhlusSunnahYouthClub{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h2>Raise a Query Against a Hadith</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="hadees_number" class="form-label">Hadees Number</label>
+            <input type="text" class="form-control" id="hadees_number" name="hadees_number" required>
+        </div>
+        <div class="mb-3">
+            <label for="line_number" class="form-label">Line Number</label>
+            <input type="text" class="form-control" id="line_number" name="line_number" required>
+        </div>
+        <div class="mb-3">
+            <label for="query_text" class="form-label">Your Query</label>
+            <textarea class="form-control" id="query_text" name="query_text" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Query</button>
+    </form>
+  </div>
+{% endblock %}

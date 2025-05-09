@@ -55,4 +55,11 @@
 
     </div>
 </div>
+
+{% if user.is_authenticated %}
+    <div class="text-end mt-5 ">
+        <a class="btn btn-warning" href="{% url 'query' %}">Submit Hadith Query</a>
+    </div>
+    
+{% endif %}
 {% endblock body %}
