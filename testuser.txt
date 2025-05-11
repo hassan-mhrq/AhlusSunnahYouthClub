@@ -1,0 +1,4 @@
+username testuser2
+email - hassan.ald2000@gmail.com
+password - process*123#
+phone - 7651856812
